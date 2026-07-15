@@ -160,7 +160,7 @@ async function loadGambarGrid(imagePath) {
       // .convert("RGB") di Python otomatis buang alpha channel -> di sini alpha diabaikan juga
       const nearest = nearestColor(rgba);
 
-      const action = nearest.code === "PT" ? "B" : DEFAULT_ACTION;
+      const action = nearest.code === "PT" ? "D" : DEFAULT_ACTION;
       const value = `${nearest.code}-${action}`;
 
       grid.set(`${y},${x}`, { value, hex: nearest.hex, code: nearest.code });
